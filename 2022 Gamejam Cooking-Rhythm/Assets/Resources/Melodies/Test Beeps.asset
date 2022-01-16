@@ -167,7 +167,7 @@ MonoBehaviour:
       Data: false
     - Name: 
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 5
       Data: false
@@ -183,24 +183,25 @@ MonoBehaviour:
   tracks:
   - note: {fileID: 11400000, guid: 6f81928a47ff37f4a9913afdc9a9c151, type: 2}
     beats:
-    - 0.45000002
-    - 1.35
-    - 1.5
+    - 0.87378645
+    - 2.6213593
+    - 2.9126215
+    - 4.3689322
     durations: []
   - note: {fileID: 11400000, guid: a037d1c1178b8874da6570b39f9fcb68, type: 2}
     beats:
-    - 0.3
-    - 1.2
-    - 1.6500001
+    - 0.5825243
+    - 2.3300972
+    - 3.2038836
     durations: []
   - note: {fileID: 11400000, guid: ff9983c1cf311b9488503ec908a71c3c, type: 2}
     beats:
     - 0
-    - 0.15
-    - 0.75
-    - 0.90000004
-    - 1.8000001
-    - 1.95
+    - 0.29126215
+    - 1.4563107
+    - 1.7475729
+    - 3.4951458
+    - 3.786408
     durations: []
-  bpm: 200
+  bpm: 103
   bars: 2
