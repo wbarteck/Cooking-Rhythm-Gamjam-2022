@@ -9,6 +9,7 @@ public class Track
     public Note note;
     public List<float> beats = new List<float>();
     public List<float> durations = new List<float>();
+    public bool backgroundTrack;
 
     public Track()
     {
