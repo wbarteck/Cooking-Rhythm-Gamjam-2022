@@ -22,13 +22,6 @@ public class MelodyPlayer : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        // just a visualization test really
-        if (!play) return;
-        _timeInLoop = (_timeInLoop + Time.deltaTime) % melody.TotalSeconds;
-        UnityEditor.EditorUtility.SetDirty(this);
-    }
 
     IEnumerator PlayLoop(Track track, float startTime = 0f)
     {
