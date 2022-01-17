@@ -63,7 +63,7 @@ public class MelodyPlayer : MonoBehaviour
     async void UseAudioSource(Track track, AudioSource source)
     {
         source.clip = track.note.cookingNote;
-        source.pitch = track.note.pitch;
+        source.pitch = track.pitch;
         source.Play();
         // check for null in case we stop or quit while playing
         await Task.Delay((int)(track.note.cookingNote.length * 1000));

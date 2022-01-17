@@ -26,10 +26,10 @@ public class LoopingPlayer : MonoBehaviour
         List<TimedNote> notes = new List<TimedNote>();
         foreach(Track t in order.tracks)
             foreach(var time in t.beats)
-                notes.Add(new TimedNote(t.note, false, time));
+                notes.Add(new TimedNote(t.note, t.pitch, false, false, time));
         foreach (Track t in player.tracks)
             foreach (var time in t.beats)
-                notes.Add(new TimedNote(t.note, true, time));
+                notes.Add(new TimedNote(t.note, t.pitch, true, false, time));
         notes.Sort();
         noteQueue = new Queue<TimedNote>(notes);
         nextNote = noteQueue.Dequeue();
@@ -48,7 +48,7 @@ public class LoopingPlayer : MonoBehaviour
             {
                 // play note
                 AudioSource source = AudioSourcePool.instance.GetAudioSource();
-                UseAudioSource(nextNote.note, source);
+                UseAudioSource(nextNote, source);
                 nextNote = noteQueue.Count > 0 ? noteQueue.Dequeue() : null;
             }
             currentTime += Time.deltaTime;
@@ -56,13 +56,13 @@ public class LoopingPlayer : MonoBehaviour
         }
     }
 
-    async void UseAudioSource(Note note, AudioSource source)
+    async void UseAudioSource(TimedNote tn, AudioSource source)
     {
-        source.clip = note.cookingNote;
-        source.pitch = note.pitch;
+        source.clip = tn.note.cookingNote;
+        source.pitch = tn.pitch;
         source.Play();
         // check for null in case we stop or quit while playing
-        await Task.Delay((int)(note.cookingNote.length * 1000));
+        await Task.Delay((int)(tn.note.cookingNote.length * 1000));
         if (source != null) AudioSourcePool.instance.ReleaseAudioSource(source);
     }
 }
@@ -70,13 +70,17 @@ public class LoopingPlayer : MonoBehaviour
 public class TimedNote: IComparer, System.IComparable
 {
     public Note note;
+    public float pitch;
+    public bool isBackground;
     public bool isPlayer;
     public float timestamp;
 
-    public TimedNote(Note _note, bool _isPlayer, float _timestamp)
+    public TimedNote(Note _note, float _pitch, bool _isPlayer, bool _isBackground, float _timestamp)
     {
         note = _note;
+        pitch = _pitch;
         isPlayer = _isPlayer;
+        isBackground = _isBackground;
         timestamp = _timestamp;
     }
 

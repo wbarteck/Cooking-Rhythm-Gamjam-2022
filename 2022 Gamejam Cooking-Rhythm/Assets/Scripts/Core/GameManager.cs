@@ -8,6 +8,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public enum GameState
+    {
+        Idle,
+        Composition,
+        Judging,
+        End
+    }
+    public GameState gameState;
+
     public Melody currentOrder;
 
 
@@ -20,4 +29,11 @@ public class GameManager : MonoBehaviour
     {
         instance = null;
     }
+}
+
+[System.Serializable]
+public class Course
+{
+    public Melody order;
+    public float timeLimit;
 }
