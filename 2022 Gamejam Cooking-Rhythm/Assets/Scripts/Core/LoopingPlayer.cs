@@ -12,11 +12,16 @@ public class LoopingPlayer : MonoBehaviour
     [SerializeField] float orderVolume = 0f;
     [SerializeField] float currentTime;
 
+
+    Melody currentMelody;
     TimedNote nextNote;
     Queue<TimedNote> noteQueue;
 
+    public float Progress { get { return(currentMelody != null) ? Mathf.Clamp01(currentTime / currentMelody.TotalSeconds) : 0f; } }
+
     [Button] public void StartPlayhead(Melody order, float startTime = 0f)
     {
+        currentMelody = order;
         StopAllCoroutines();
         StartCoroutine(Playhead(order, startTime));
     }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6917856563276200790}
   - component: {fileID: 7617062675249525710}
+  - component: {fileID: 4688916841732585891}
   m_Layer: 0
   m_Name: Grid Point
   m_TagString: Untagged
@@ -44,3 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1343b9a0e2e8e27428822f62e10be40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterEvent: {fileID: 0}
+  exitEvent: {fileID: 0}
+  collider: {fileID: 4688916841732585891}
+--- !u!65 &4688916841732585891
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4206600639583664141}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
