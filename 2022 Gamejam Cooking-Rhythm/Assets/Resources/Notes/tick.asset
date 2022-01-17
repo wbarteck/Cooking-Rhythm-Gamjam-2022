@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cae41671527b454e94998b5702d8ac3, type: 3}
   m_Name: tick
   m_EditorClassIdentifier: 
-  cookingNote: {fileID: 8300000, guid: 431fb64cccfc11344bb2576b8e63fb26, type: 3}
-  musicalNote: {fileID: 8300000, guid: 431fb64cccfc11344bb2576b8e63fb26, type: 3}
+  cookingNote: {fileID: 8300000, guid: da97affb294fc436eb89b2a9ab093e47, type: 3}
+  musicalNote: {fileID: 8300000, guid: da97affb294fc436eb89b2a9ab093e47, type: 3}
   volume: 0.5
