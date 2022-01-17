@@ -15,6 +15,6 @@ public class FaceCamera : MonoBehaviour
     void Update()
     {
         //transform.forward = (cameraTransform.position - transform.position).normalized;
-        transform.forward = -cameraTransform.forward;
+        transform.forward = cameraTransform.forward;
     }
 }

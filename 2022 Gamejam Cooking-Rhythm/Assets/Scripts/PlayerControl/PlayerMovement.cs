@@ -60,4 +60,10 @@ public class PlayerMovement : MonoBehaviour
 
         return gridPoint;
     }
+
+    public void MoveHere(Transform destination)
+    {
+        nearestPoint = destination;
+        agent.SetDestination(destination.position);
+    }
 }

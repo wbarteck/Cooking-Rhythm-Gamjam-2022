@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cookingNote: {fileID: 8300000, guid: 431fb64cccfc11344bb2576b8e63fb26, type: 3}
   musicalNote: {fileID: 8300000, guid: 431fb64cccfc11344bb2576b8e63fb26, type: 3}
-  volume: 0.2
+  volume: 0.5

@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
-using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 
 public class LoopingPlayer : MonoBehaviour
 {
     [SerializeField] bool isPlaying;
     //[SerializeField] float playerVolume = 0f;
-    [SerializeField] float orderVolume = 0f;
+    [SerializeField] float orderVolume = 1f;
+    [SerializeField] float playerVolume = 1f;
     [SerializeField] float currentTime;
+    public float GetCurrentTime { get { return currentTime; } }
 
 
     Melody currentMelody;
@@ -25,10 +27,21 @@ public class LoopingPlayer : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(Playhead(order, startTime));
     }
+    public void UpdateBeat()
+    {
+        // re-trigger the playhead coroutine
+        // this forces a refresh on the notes queue to play
+        StopAllCoroutines();
+        StartCoroutine(Playhead(currentMelody, currentTime));
+    }
+
 
     IEnumerator Playhead(Melody order, float startTime = 0f)
     {
         List<TimedNote> notes = Track.TracksToTimedNotes(order.tracks);
+        // add player notes
+        notes.AddRange(Station.PlayerNotes());
+        notes.Sort();
         noteQueue = new Queue<TimedNote>(notes);
         
         nextNote = noteQueue.Dequeue();
@@ -62,11 +75,25 @@ public class LoopingPlayer : MonoBehaviour
     {
         source.clip = tn.note.cookingNote;
         source.pitch = tn.pitch;
-        source.volume = tn.note.volume * orderVolume; // FIXME
+        if (tn.isBackground) // always play
+            source.volume = tn.note.volume;
+        else
+            source.volume = tn.note.volume * ((tn.isPlayer) ? playerVolume : orderVolume);
         source.Play();
         // release audio source to pool ocne the sound is finished playing
-        await Task.Delay((int)(tn.note.cookingNote.length * 1000));
+        await UniTask.Delay((int)(tn.note.cookingNote.length * 1000));
         if (source != null) AudioSourcePool.instance.ReleaseAudioSource(source);
+    }
+
+    public void SoloOrderAudio()
+    {
+        playerVolume = 0f;
+        orderVolume = 1f;
+    }
+    public void SoloPlayerAudio()
+    {
+        playerVolume = 1f;
+        orderVolume = 0f;
     }
 }
 

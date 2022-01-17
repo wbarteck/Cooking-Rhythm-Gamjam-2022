@@ -1,27 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GridPoint : MonoBehaviour
 {
     public GameEvent enterEvent;
     public GameEvent exitEvent;
+    // sometimes its easier to just use unity events and wire things up
+    public UnityEvent enterUnityEvent;
+    public UnityEvent exitUnityEvent;
 
     [SerializeField] BoxCollider collider;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<PlayerMovement>(out PlayerMovement player))
+        if (other.transform.root.TryGetComponent<PlayerMovement>(out PlayerMovement player))
         {
             enterEvent?.Raise();
+            enterUnityEvent?.Invoke();
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent<PlayerMovement>(out PlayerMovement player))
+        if (other.transform.root.TryGetComponent<PlayerMovement>(out PlayerMovement player))
         {
             exitEvent?.Raise();
+            exitUnityEvent?.Invoke();
         }
     }
 

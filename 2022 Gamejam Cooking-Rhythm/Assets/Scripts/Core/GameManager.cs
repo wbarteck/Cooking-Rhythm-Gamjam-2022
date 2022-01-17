@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 using Sirenix.OdinInspector;
@@ -51,9 +51,9 @@ public class GameManager : MonoBehaviour
         currentOrder = order;
 
         // delay a X seconds
-        await Task.Delay(Mathf.CeilToInt(1000 * 1.5f));
+        await UniTask.Delay(Mathf.CeilToInt(1000 * 1.5f));
         playhead.StartPlayhead(order, 0f);
-        await Task.Delay(Mathf.CeilToInt(order.TotalSeconds * 1000));
+        await UniTask.Delay(Mathf.CeilToInt(order.TotalSeconds * 1000));
 
         // start composition
         gameState = GameState.Composition;

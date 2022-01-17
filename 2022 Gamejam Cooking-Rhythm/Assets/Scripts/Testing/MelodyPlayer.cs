@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
@@ -66,7 +66,7 @@ public class MelodyPlayer : MonoBehaviour
         source.pitch = track.pitch;
         source.Play();
         // check for null in case we stop or quit while playing
-        await Task.Delay((int)(track.note.cookingNote.length * 1000));
+        await UniTask.Delay((int)(track.note.cookingNote.length * 1000));
         if (source != null) AudioSourcePool.instance.ReleaseAudioSource(source);
     }
 }
