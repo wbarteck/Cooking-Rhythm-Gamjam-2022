@@ -13,22 +13,33 @@ public class CounterInteraction : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Bring up counter UI 
-        approachStation.Raise();
+        if (other.gameObject.GetComponent<PlayerMovement>())
+        {
+            playerAtStation = true;
+            approachStation.Raise();
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         //Close counter UI
-        leaveStation.Raise();
+        if (other.gameObject.GetComponent<PlayerMovement>())
+        {
+            playerAtStation = false;
+
+            leaveStation.Raise();
+        }
     }
 
     public void ApproachStation()
     {
-        playerAtStation = true;
+        //blank for now
+       
     }
 
     public void LeaveStation()
     {
-        playerAtStation = false;
+        //blank for now
+
     }
 }
