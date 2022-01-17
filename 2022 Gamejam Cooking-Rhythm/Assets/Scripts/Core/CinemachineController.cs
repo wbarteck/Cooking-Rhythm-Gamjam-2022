@@ -8,7 +8,6 @@ using Sirenix.OdinInspector;
 public class CinemachineController : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera[] cameras;
-
     [Button] void GetCameras() => cameras = GetComponentsInChildren<CinemachineVirtualCamera>(true);
 
     private void Awake()
@@ -21,4 +20,5 @@ public class CinemachineController : MonoBehaviour
         foreach (var c in cameras) c.gameObject.SetActive(false);
         cameras[cameraIndex].gameObject.SetActive(true);
     }
+
 }

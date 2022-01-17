@@ -18,4 +18,15 @@ public class Track
     {
 
     }
+
+    public static List<TimedNote> TracksToTimedNotes(Track[] tracks)
+    {
+        List<TimedNote> notes = new List<TimedNote>();
+        foreach (Track t in tracks)
+            foreach (var time in t.beats)
+                notes.Add(new TimedNote(t.note, t.pitch, false, t.backgroundTrack, time));
+        
+        notes.Sort();
+        return notes;
+    }
 }

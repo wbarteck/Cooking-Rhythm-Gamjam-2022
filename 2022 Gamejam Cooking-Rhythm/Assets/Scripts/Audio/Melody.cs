@@ -17,8 +17,8 @@ public class Melody : SerializedScriptableObject // could also just be a class
     [OnValueChanged("UpdateTracks")]
     public int bars = 2;
     [ShowInInspector, ReadOnly] private float beatDuration { get { return 60f / bpm; } }
-    private int TrackLength { get { return bars * 8; } }
-    [ShowInInspector, ReadOnly] public float TotalSeconds { get { return beatDuration * 4 * bars; } }
+    private int TrackLength { get { return bars * 16; } }
+    [ShowInInspector, ReadOnly] public float TotalSeconds { get { return beatDuration * 8 * 0.5f * bars; } }
 
     [Button("ResetTrackEditor"), DisableIf("@this.tracks.Length == 0")]
     void CreateTrackEditor()
@@ -31,7 +31,7 @@ public class Melody : SerializedScriptableObject // could also just be a class
 
 #if UNITY_EDITOR
     
-    [TableMatrix(DrawElementMethod = "DrawCell", HideColumnIndices = true, HideRowIndices = true, HorizontalTitle = "Melody Editor")]
+    [TableMatrix(DrawElementMethod = "DrawCell", ResizableColumns =false, HideColumnIndices = true, HideRowIndices = true, HorizontalTitle = "Melody Editor")]
     [OnValueChanged("UpdateTracks")]
     [SerializeField]
     private bool[,] trackBeats = new bool[0,0];

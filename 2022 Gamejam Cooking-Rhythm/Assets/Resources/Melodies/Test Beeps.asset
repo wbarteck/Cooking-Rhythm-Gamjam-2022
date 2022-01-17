@@ -181,20 +181,24 @@ MonoBehaviour:
       Entry: 8
       Data: 
   tracks:
-  - note: {fileID: 11400000, guid: 6f81928a47ff37f4a9913afdc9a9c151, type: 2}
+  - note: {fileID: 11400000, guid: 0de289dfa59a3464cb5efed2983dfd68, type: 2}
     beats:
     - 0.87378645
     - 2.6213593
     - 2.9126215
     - 4.3689322
     durations: []
-  - note: {fileID: 11400000, guid: a037d1c1178b8874da6570b39f9fcb68, type: 2}
+    pitch: 1
+    backgroundTrack: 0
+  - note: {fileID: 11400000, guid: 4cc305cd62205174183afd66990cb579, type: 2}
     beats:
     - 0.5825243
     - 2.3300972
     - 3.2038836
     durations: []
-  - note: {fileID: 11400000, guid: ff9983c1cf311b9488503ec908a71c3c, type: 2}
+    pitch: 1
+    backgroundTrack: 0
+  - note: {fileID: 11400000, guid: 6f81928a47ff37f4a9913afdc9a9c151, type: 2}
     beats:
     - 0
     - 0.29126215
@@ -203,5 +207,7 @@ MonoBehaviour:
     - 3.4951458
     - 3.786408
     durations: []
+    pitch: 1
+    backgroundTrack: 0
   bpm: 103
   bars: 2

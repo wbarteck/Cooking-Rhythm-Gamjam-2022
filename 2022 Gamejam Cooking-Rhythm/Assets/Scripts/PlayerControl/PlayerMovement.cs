@@ -1,20 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.AI;
+using Sirenix.OdinInspector;
 
 public class PlayerMovement : MonoBehaviour
 {
 
-    public Camera camera;  //TODO fix to work with cinemachine
+    private Camera camera;
 
-    public NavMeshAgent agent;
+    [SerializeField] NavMeshAgent agent;
+    private Transform nearestPoint;
+    [SerializeField, ReadOnly] GridPoint[] allPoints;
 
-    public GridPoint[] allPoints;
-   
+    private void Awake()
+    {
+        camera = Camera.main;
+        allPoints = FindObjectsOfType<GridPoint>();
+    }
+
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        // dont raycast if mouse is over UI
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit raycastHit;
@@ -26,6 +36,13 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
+
+        // face the right orientation
+        if (agent.remainingDistance < 1f)
+        {
+            Vector3 desiredForward = nearestPoint?.transform.forward ?? transform.forward;
+            transform.forward = Vector3.Lerp(transform.forward, desiredForward, Time.deltaTime * 5f);
+        }
     }
 
     Vector3 FindNearestGridPoint(Vector3 mousePoint)
@@ -35,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Vector3.Distance(mousePoint, allPoints[i].transform.position) < Vector3.Distance(mousePoint, gridPoint))
             {
+                nearestPoint = allPoints[i].transform;
                 gridPoint = allPoints[i].transform.position;
             }
 
