@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Sirenix.OdinInspector;
 
@@ -9,7 +10,7 @@ public class PlayerCanvasManager : MonoBehaviour
     public static PlayerCanvasManager instance;
 
     [SerializeField] Slider pitchSlider;
-    [SerializeField] Button beatButton;
+    [SerializeField] MouseDownButton beatButton;
     [SerializeField] Button clearButton;
 
     [SerializeField] GameObject[] CompositionUI;
@@ -44,14 +45,16 @@ public class PlayerCanvasManager : MonoBehaviour
         foreach (var g in CompositionUI)
             g.SetActive(true);
 
+        EventSystem.current?.SetSelectedGameObject(beatButton.gameObject);
+
         pitchSlider.value = station.track.pitch;
 
         pitchSlider.onValueChanged.RemoveAllListeners();
-        beatButton.onClick.RemoveAllListeners();
+        beatButton.mouseDownEvent.RemoveAllListeners();
         clearButton.onClick.RemoveAllListeners();
 
         pitchSlider.onValueChanged.AddListener(station.AdjustPitch);
-        beatButton.onClick.AddListener(station.AddBeat);
+        beatButton.mouseDownEvent.AddListener(station.AddBeat);
         clearButton.onClick.AddListener(station.ClearNotes); 
     }
 
