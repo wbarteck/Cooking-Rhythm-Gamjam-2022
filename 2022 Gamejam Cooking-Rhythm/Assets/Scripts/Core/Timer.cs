@@ -8,7 +8,7 @@ using TMPro;
 using Sirenix.OdinInspector;
 public class Timer : MonoBehaviour
 {
-    public static UnityEvent timerFinishedAction;
+    public GameEvent timerFinishedAction;
 
     [SerializeField] bool useTextMeshPro = true;
     [SerializeField] float timeLeft = 60f;
@@ -16,10 +16,10 @@ public class Timer : MonoBehaviour
     [SerializeField, ShowIf("useTextMeshPro")] TMP_Text tmp_text;
     [SerializeField, HideIf("useTextMeshPro")] Text ui_text;
 
-    public void SetTime(float seconds, bool start = false)
+    public void SetTime(float seconds)
     {
         timeLeft = seconds;
-        if (start) StartTimer();
+        StartTimer();
     }
     [ButtonGroup("TimerControls")] public void StartTimer() => StartCoroutine(TimerRoutine());
     [ButtonGroup("TimerControls")] public void StopTimer() => StopAllCoroutines();
@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour
             yield return null;
         }
 
-        timerFinishedAction?.Invoke();
+        timerFinishedAction?.Raise();
     }
 
     void UpdateText()

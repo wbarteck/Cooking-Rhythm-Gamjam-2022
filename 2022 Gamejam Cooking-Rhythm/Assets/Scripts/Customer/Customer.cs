@@ -12,12 +12,6 @@ public class Customer : MonoBehaviour
 
     public Transform target;
 
-    private void Start()
-    {
-        target = GameObject.FindObjectOfType<VolumeTriggerEvent>().transform;
-        navMeshAgent.SetDestination(target.position);
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,4 +21,6 @@ public class Customer : MonoBehaviour
         }
 
     }
+
+    public void SetDestination(Vector3 pos) => navMeshAgent.SetDestination(pos);
 }
