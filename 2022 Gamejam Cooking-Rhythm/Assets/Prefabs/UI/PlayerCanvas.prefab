@@ -1786,6 +1786,8 @@ GameObject:
   - component: {fileID: 7545099512038081578}
   - component: {fileID: 1857647216467898204}
   - component: {fileID: 7069929451353602671}
+  - component: {fileID: 3875204985763491408}
+  - component: {fileID: 1968127632775263748}
   m_Layer: 5
   m_Name: PlayerCanvas
   m_TagString: Untagged
@@ -1946,6 +1948,62 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PlayerCanvasManager, Assembly-CSharp
         m_MethodName: LeftStation
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3875204985763491408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124965201716050064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a0b51b1e568de438692f144d53684b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b85f84809260db042b4aa3ab1122a9bd, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1233210600}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1968127632775263748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124965201716050064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a0b51b1e568de438692f144d53684b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d5968c0adaa2c4d4e9a26aff5c4ddeab, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1233210600}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4938,6 +4996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a82548d1436f104d944d6f4fd5fff3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerFinishedAction: {fileID: 11400000, guid: aaf30055011b2234da54d13f7b8d15bf, type: 2}
   useTextMeshPro: 1
   timeLeft: 60
   tmp_text: {fileID: 1408022389}
@@ -4960,7 +5019,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1537345903}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: StartTimer
+        m_MethodName: MoveToJudement
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

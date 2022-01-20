@@ -59,6 +59,12 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Composition;
         goToComposition.Raise();
     }
+
+    public void RoundComplete()
+    {
+        gameState = GameState.Judging;
+        goToJudging.Raise();
+    }
 }
 
 [System.Serializable]
