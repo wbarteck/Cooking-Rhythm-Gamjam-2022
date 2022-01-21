@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public Melody currentOrder;
 
 
-    private void Awake()
+    private void Start()
     {
         instance = this;
 

@@ -22,5 +22,8 @@ public class Customer : MonoBehaviour
 
     }
 
-    public void SetDestination(Vector3 pos) => navMeshAgent.SetDestination(pos);
+    public void SetDestination(Vector3 pos)
+    {
+        navMeshAgent.SetDestination(pos);
+    }
 }

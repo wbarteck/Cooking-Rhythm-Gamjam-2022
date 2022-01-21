@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 public class CustomerQueue : MonoBehaviour
 {
@@ -21,12 +22,13 @@ public class CustomerQueue : MonoBehaviour
         {
             if (cust != current)
             {
+                Debug.Log($"Destroying {cust.name}");
                 Destroy(cust.gameObject);
             }
         }
     }
 
-    public void SpawnCustomer()
+    public async void SpawnCustomer()
     {
         // SendCustomerHome previous customer home
         SendCustomerHome();
