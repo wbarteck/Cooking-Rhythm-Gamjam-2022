@@ -63,7 +63,6 @@ public class Station : MonoBehaviour
     private void OnMouseEnter()
     {
         if (isPlaying) return;
-        print($"MOUSE enter {gameObject.name}");
         PlayOneShot();
     }
 }
