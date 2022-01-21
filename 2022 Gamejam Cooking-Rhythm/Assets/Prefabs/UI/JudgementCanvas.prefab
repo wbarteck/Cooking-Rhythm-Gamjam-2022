@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 7954398352760790733}
   - component: {fileID: 7954398352760790729}
   - component: {fileID: 7954398352760790728}
+  - component: {fileID: 2587192839846435744}
   m_Layer: 5
   m_Name: JudgementCanvas
   m_TagString: Untagged
@@ -333,6 +334,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2587192839846435744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7954398352760790722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a0b51b1e568de438692f144d53684b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b85f84809260db042b4aa3ab1122a9bd, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7954398352519463520}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &6961666984671157298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -439,10 +468,22 @@ PrefabInstance:
     - target: {fileID: 8784571519873976348, guid: 00142a16c0c374736875683814419fb3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: 38a82206887163641b6790fd6a3f1687, type: 2}
+      objectReference: {fileID: 11400000, guid: b85f84809260db042b4aa3ab1122a9bd, type: 2}
     - target: {fileID: 8784571519873976348, guid: 00142a16c0c374736875683814419fb3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784571519873976348, guid: 00142a16c0c374736875683814419fb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784571519873976348, guid: 00142a16c0c374736875683814419fb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameEvent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784571519873976348, guid: 00142a16c0c374736875683814419fb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8784571520556687915, guid: 00142a16c0c374736875683814419fb3, type: 3}
       propertyPath: m_text
