@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 7954398352760790728}
   - component: {fileID: 2587192839846435744}
   - component: {fileID: 9204060243741616387}
+  - component: {fileID: 746455517988473523}
   m_Layer: 5
   m_Name: JudgementCanvas
   m_TagString: Untagged
@@ -477,6 +478,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &746455517988473523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7954398352760790722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b516c1dbbe28e047a692ec5cdd2c12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 7954398352235798574}
+  goodScore: {fileID: 11400000, guid: e90c6857a9a45224481461c3ce5aa54a, type: 2}
+  medScore: {fileID: 11400000, guid: f7c030a1d0901cc408c334e9c682c099, type: 2}
+  badScore: {fileID: 11400000, guid: 67f6d4f8e5d47484d8cf7cbf360efba8, type: 2}
+  badScoreMin: 10.1
+  badScoreMax: 20
+  medScoreMin: 10.1
+  medScoreMax: 4.9
+  goodScoreMin: 0.1
+  goodScoreMax: 5
 --- !u!1001 &6961666984671157298
 PrefabInstance:
   m_ObjectHideFlags: 0
