@@ -415,6 +415,14 @@ PrefabInstance:
       value: Grid Point
       objectReference: {fileID: 0}
     - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
+      propertyPath: m_Size.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -6583,6 +6591,14 @@ PrefabInstance:
       value: Grid Point
       objectReference: {fileID: 0}
     - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
+      propertyPath: m_Size.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -6757,7 +6773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playhead: {fileID: 1199358033}
   track:
-    note: {fileID: 11400000, guid: 6f81928a47ff37f4a9913afdc9a9c151, type: 2}
+    note: {fileID: 11400000, guid: 5b5e4d68f39b6164b9f56d001cc5c5f6, type: 2}
     beats: []
     durations: []
     pitch: 1
@@ -8430,6 +8446,14 @@ PrefabInstance:
       value: Grid Point
       objectReference: {fileID: 0}
     - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
+      propertyPath: m_Size.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -9741,7 +9765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playhead: {fileID: 1199358033}
   track:
-    note: {fileID: 11400000, guid: 0de289dfa59a3464cb5efed2983dfd68, type: 2}
+    note: {fileID: 11400000, guid: 9fb34a0a47d8a6d4fa35d951cd9505f3, type: 2}
     beats: []
     durations: []
     pitch: 1
@@ -10234,7 +10258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playhead: {fileID: 1199358033}
   track:
-    note: {fileID: 11400000, guid: 0de289dfa59a3464cb5efed2983dfd68, type: 2}
+    note: {fileID: 11400000, guid: 5b6f36e17e372c749b7e27493e0e188e, type: 2}
     beats: []
     durations: []
     pitch: 1
@@ -13473,7 +13497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playhead: {fileID: 1199358033}
   track:
-    note: {fileID: 11400000, guid: 4cc305cd62205174183afd66990cb579, type: 2}
+    note: {fileID: 11400000, guid: 2dac0d4c930ddc0408e1d76ee42a0c04, type: 2}
     beats: []
     durations: []
     pitch: 1
@@ -19240,7 +19264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playhead: {fileID: 1199358033}
   track:
-    note: {fileID: 11400000, guid: 4cc305cd62205174183afd66990cb579, type: 2}
+    note: {fileID: 11400000, guid: 9cf659360f69eae4eb5f11dd7b767e11, type: 2}
     beats: []
     durations: []
     pitch: 1
@@ -20886,6 +20910,14 @@ PrefabInstance:
     - target: {fileID: 4206600639583664141, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
       propertyPath: m_Name
       value: Grid Point
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
+      propertyPath: m_Size.z
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
       propertyPath: m_IsTrigger
@@ -22843,6 +22875,14 @@ PrefabInstance:
       value: Grid Point
       objectReference: {fileID: 0}
     - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
+      propertyPath: m_Size.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -23126,6 +23166,14 @@ PrefabInstance:
     - target: {fileID: 4206600639583664141, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
       propertyPath: m_Name
       value: Grid Point
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
+      propertyPath: m_Size.z
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
       propertyPath: m_IsTrigger

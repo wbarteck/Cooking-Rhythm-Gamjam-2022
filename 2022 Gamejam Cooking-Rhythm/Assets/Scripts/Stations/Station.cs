@@ -11,6 +11,8 @@ public class Station : MonoBehaviour
 
     public Track track;
 
+    private bool isPlaying;
+
     [Button] public void ClearNotes() { 
         track.beats.Clear(); 
         playhead.UpdateBeat(); 
@@ -40,6 +42,7 @@ public class Station : MonoBehaviour
 
     async void PlayOneShot()
     {
+        isPlaying = true;
         AudioSource source = AudioSourcePool.instance.GetAudioSource();
         source.clip = track.note.cookingNote;
         source.pitch = track.pitch;
@@ -48,11 +51,19 @@ public class Station : MonoBehaviour
         // release audio source to pool ocne the sound is finished playing
         await UniTask.Delay((int)(track.note.cookingNote.length * 1000));
         if (source != null) AudioSourcePool.instance.ReleaseAudioSource(source);
+        isPlaying = false;
     }
 
     public void AdjustPitch(float _pitch)
     {
         track.pitch = _pitch;
         playhead.UpdateBeat();
+    }
+
+    private void OnMouseEnter()
+    {
+        if (isPlaying) return;
+        print($"MOUSE enter {gameObject.name}");
+        PlayOneShot();
     }
 }
