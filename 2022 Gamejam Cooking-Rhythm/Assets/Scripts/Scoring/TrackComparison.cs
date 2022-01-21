@@ -9,6 +9,17 @@ public class TrackComparison : MonoBehaviour
     public TMP_Text scoreText;
 
     float tolerance = .1f; //notes within X second count as perfect timing
+
+    public GameEvent goodScore;
+    public GameEvent medScore;
+    public GameEvent badScore;
+
+    public float badScoreMin = 10.1f;
+    public float badScoreMax = 20.0f;
+    public float medScoreMin = 10.1f;
+    public float medScoreMax = 4.9f;
+    public float goodScoreMin = 0.1f;
+    public float goodScoreMax = 5.0f;
     public void Score()
     {
         Melody customerOrder = GameManager.instance.currentOrder;
@@ -24,6 +35,7 @@ public class TrackComparison : MonoBehaviour
         }
         Debug.Log($"Total Distance: {distance}");
         scoreText.text = $"Higher numer = worse performance: {distance}";
+        CompareScore(distance);
     }
 
     public float CompareTracks(Track a, Track b)
@@ -39,5 +51,24 @@ public class TrackComparison : MonoBehaviour
 
         }
         return (noteDifference * 1f) + distance;
+    }
+
+    public void CompareScore(float score)
+    {
+
+        if (score >= badScoreMin)
+        {
+            badScore.Raise();
+        }
+
+        if (score >= medScoreMax && score <= medScoreMin)
+        {
+            medScore.Raise();
+        }
+
+        if (score >= goodScoreMin && score <= goodScoreMax)
+        {
+            goodScore.Raise();
+        }
     }
 }
