@@ -30,6 +30,7 @@ public class CustomerQueue : MonoBehaviour
 
     public async void SpawnCustomer()
     {
+        Debug.Log("Spawn Customer");
         // SendCustomerHome previous customer home
         SendCustomerHome();
         // if no more customers in queue, end the game
