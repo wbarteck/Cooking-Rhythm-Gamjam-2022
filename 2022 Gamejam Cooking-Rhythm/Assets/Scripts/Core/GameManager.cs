@@ -65,6 +65,11 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Judging;
         goToJudging.Raise();
     }
+
+    public void GameOver()
+    {
+        goToEnd.Raise();
+    }
 }
 
 [System.Serializable]

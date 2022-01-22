@@ -36,7 +36,7 @@ public class TrackComparison : MonoBehaviour
         Debug.Log($"Total Distance: {distance}");
         var scorePercent = distance / totalNotes;
         Debug.Log($"Score Percent: {scorePercent}");
-        scoreText.text = $"Yout Got {Mathf.Round((1f - scorePercent) * 100)}% of the notes correct";
+        scoreText.text = $"You Got {Mathf.Round((1f - scorePercent) * 100)}% of the notes correct";
 
         CompareScore(scorePercent);
     }

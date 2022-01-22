@@ -35,6 +35,7 @@ public class LoopingPlayer : MonoBehaviour
     }
     public void UpdateBeat()
     {
+        if (currentMelody == null) return;
         // re-trigger the playhead coroutine
         // this forces a refresh on the notes queue to play
         StopAllCoroutines();

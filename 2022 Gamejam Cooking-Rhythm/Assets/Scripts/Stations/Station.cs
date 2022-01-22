@@ -15,7 +15,12 @@ public class Station : MonoBehaviour
 
     [Button] public void ClearNotes() { 
         track.beats.Clear(); 
-        playhead.UpdateBeat(); 
+        playhead?.UpdateBeat(); 
+    }
+
+    public void ResetNotes()
+    {
+        track.beats.Clear(); 
     }
 
     public static List<TimedNote> PlayerNotes()
