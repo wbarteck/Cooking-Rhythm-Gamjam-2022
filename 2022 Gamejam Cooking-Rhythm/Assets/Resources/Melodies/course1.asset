@@ -434,7 +434,7 @@ MonoBehaviour:
     durations: []
     pitch: 1
     backgroundTrack: 1
-  - note: {fileID: 11400000, guid: 0de289dfa59a3464cb5efed2983dfd68, type: 2}
+  - note: {fileID: 11400000, guid: 4ff65eb0106552446a661b288c9eabc3, type: 2}
     beats:
     - 0
     - 0.6666667
@@ -447,7 +447,7 @@ MonoBehaviour:
     durations: []
     pitch: 1
     backgroundTrack: 0
-  - note: {fileID: 11400000, guid: 4cc305cd62205174183afd66990cb579, type: 2}
+  - note: {fileID: 11400000, guid: 2dac0d4c930ddc0408e1d76ee42a0c04, type: 2}
     beats:
     - 0.33333334
     - 0.5

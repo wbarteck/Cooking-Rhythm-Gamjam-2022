@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cae41671527b454e94998b5702d8ac3, type: 3}
   m_Name: Pepper Milll
   m_EditorClassIdentifier: 
-  cookingNote: {fileID: 8300000, guid: bb373e165f9dddc4a9a2f7a68257d54a, type: 3}
+  cookingNote: {fileID: 8300000, guid: e4f9da292c002644fbc199460e180142, type: 3}
   musicalNote: {fileID: 0}
   volume: 0.75

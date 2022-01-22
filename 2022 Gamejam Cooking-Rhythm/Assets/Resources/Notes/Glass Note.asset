@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cae41671527b454e94998b5702d8ac3, type: 3}
-  m_Name: Pan Sizzle
+  m_Name: Glass Note
   m_EditorClassIdentifier: 
-  cookingNote: {fileID: 8300000, guid: e057576f77022ea46afbb41a10d66a23, type: 3}
-  musicalNote: {fileID: 8300000, guid: e057576f77022ea46afbb41a10d66a23, type: 3}
+  cookingNote: {fileID: 8300000, guid: 1c408015aca214049a52d10aa8ee6721, type: 3}
+  musicalNote: {fileID: 0}
   volume: 0.75
