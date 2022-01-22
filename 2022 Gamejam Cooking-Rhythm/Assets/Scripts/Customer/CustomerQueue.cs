@@ -13,8 +13,12 @@ public class CustomerQueue : MonoBehaviour
     private Customer current;
 
     public Melody[] courses;
-    private Queue<Melody> courseQueue { get { return new Queue<Melody>(courses); } }
+    private Queue<Melody> courseQueue;
 
+    private void Awake()
+    {
+         courseQueue = new Queue<Melody>(courses);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
