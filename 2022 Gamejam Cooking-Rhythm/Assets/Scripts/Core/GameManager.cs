@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [Title("Event References")]
+    [SerializeField] GameEvent goToIntro;
     [SerializeField] GameEvent goToIdle;
     [SerializeField] GameEvent goToPlaceOrder;
     [SerializeField] GameEvent goToComposition;
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     public enum GameState
     {
+        Intro,
         Idle,
         PlaceOrder,
         Composition,
@@ -29,19 +31,33 @@ public class GameManager : MonoBehaviour
     public GameState gameState;
 
     public Melody currentOrder;
-
+    public float introTime = 1.0f;
 
     private void Start()
     {
         instance = this;
 
-        gameState = GameState.Idle;
-        goToIdle.Raise();
+        gameState = GameState.Intro;
+        goToIntro.Raise();
+        StartCoroutine(StartGameAfterIntro());
     }
 
     private void OnDisable()
     {
         instance = null;
+    }
+
+    public void StartGamePlay()
+    {
+        gameState = GameState.Idle;
+        goToIdle.Raise();
+
+    }
+
+    IEnumerator StartGameAfterIntro()
+    {
+        yield return new WaitForSeconds(introTime);
+        StartGamePlay();
     }
 
     public async void PlaceOrder(Melody order)
