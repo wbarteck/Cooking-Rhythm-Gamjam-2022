@@ -5182,6 +5182,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6917856563276200790, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
   m_PrefabInstance: {fileID: 1970642820}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &294819667 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 4688916841732585891, guid: 6c92d54b16001f34b819fd8f40aed999, type: 3}
+  m_PrefabInstance: {fileID: 1970642820}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &294819669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294819659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a0b51b1e568de438692f144d53684b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 38a82206887163641b6790fd6a3f1687, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 294819667}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &294819670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294819659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a0b51b1e568de438692f144d53684b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d5968c0adaa2c4d4e9a26aff5c4ddeab, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 294819667}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &300726762
 GameObject:
   m_ObjectHideFlags: 0
@@ -7581,6 +7642,51 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 799c7c8757c484740a68a1642b706904, type: 3}
   m_PrefabInstance: {fileID: 1565354875}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &572165520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3124965201716050064, guid: a463987b542ed7149a51c6a2cee0f700, type: 3}
+  m_PrefabInstance: {fileID: 2112884032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &572165530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572165520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a0b51b1e568de438692f144d53684b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 38a82206887163641b6790fd6a3f1687, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 307811949}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1278528878}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &596004531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13144,6 +13250,7 @@ GameObject:
   - component: {fileID: 1199358034}
   - component: {fileID: 1199358033}
   - component: {fileID: 1199358035}
+  - component: {fileID: 1199358036}
   m_Layer: 0
   m_Name: Playhead
   m_TagString: Untagged
@@ -13197,7 +13304,47 @@ MonoBehaviour:
   Event: {fileID: 11400000, guid: d5968c0adaa2c4d4e9a26aff5c4ddeab, type: 2}
   Response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1199358033}
+        m_TargetAssemblyTypeName: LoopingPlayer, Assembly-CSharp
+        m_MethodName: PlayBoth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1199358036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199358032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a0b51b1e568de438692f144d53684b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 38a82206887163641b6790fd6a3f1687, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1199358033}
+        m_TargetAssemblyTypeName: LoopingPlayer, Assembly-CSharp
+        m_MethodName: StopPlayhead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1221167209
 GameObject:
   m_ObjectHideFlags: 0

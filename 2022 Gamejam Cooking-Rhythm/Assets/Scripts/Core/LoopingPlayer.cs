@@ -21,6 +21,12 @@ public class LoopingPlayer : MonoBehaviour
 
     public float Progress { get { return(currentMelody != null) ? Mathf.Clamp01(currentTime / currentMelody.TotalSeconds) : 0f; } }
 
+    [Button]
+    public void StopPlayhead()
+    {
+        currentTime = 0f;
+        StopAllCoroutines();
+    }
     [Button] public void StartPlayhead(Melody order, float startTime = 0f)
     {
         currentMelody = order;
@@ -94,6 +100,12 @@ public class LoopingPlayer : MonoBehaviour
     {
         playerVolume = 1f;
         orderVolume = 0f;
+    }
+
+    public void PlayBoth()
+    {
+        playerVolume = 1f;
+        orderVolume = 1f;
     }
 }
 
