@@ -3366,7 +3366,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6705202, y: 1}
+    m_SensorSize: {x: 0.97001034, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7078,7 +7078,7 @@ GameObject:
   - component: {fileID: 453485933}
   - component: {fileID: 453485934}
   m_Layer: 0
-  m_Name: Station 3
+  m_Name: Station 3 - Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8596,7 +8596,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643731358}
-  m_LocalRotation: {x: 0.2705981, y: 0.65328145, z: -0.270598, w: 0.65328157}
+  m_LocalRotation: {x: 0.27059805, y: 0.65328145, z: -0.27059805, w: 0.65328157}
   m_LocalPosition: {x: -6.33168, y: 8.019797, z: -6.518524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8634,7 +8634,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6705202, y: 1}
+    m_SensorSize: {x: 0.97001034, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10418,7 +10418,7 @@ GameObject:
   - component: {fileID: 902805991}
   - component: {fileID: 902805992}
   m_Layer: 0
-  m_Name: Station 1
+  m_Name: Station 1 - Cutlery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11966,7 +11966,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6705202, y: 1}
+    m_SensorSize: {x: 0.97001034, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -12715,7 +12715,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6705202, y: 1}
+    m_SensorSize: {x: 0.97001034, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -12770,7 +12770,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6705202, y: 1}
+    m_SensorSize: {x: 0.97001034, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -20336,7 +20336,7 @@ GameObject:
   - component: {fileID: 1676119164}
   - component: {fileID: 1676119165}
   m_Layer: 0
-  m_Name: Station 2
+  m_Name: Station 2 - Chop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23398,7 +23398,7 @@ MonoBehaviour:
   customerPrefab: {fileID: 1419759324841590296, guid: 5504b0bb21ca3ad409dca68144a0e2c2, type: 3}
   courses:
   - {fileID: 11400000, guid: 50b4338615f80b841b85e6098b44615d, type: 2}
-  - {fileID: 11400000, guid: 50b4338615f80b841b85e6098b44615d, type: 2}
+  - {fileID: 11400000, guid: fb65c020d9fb20e4898a619106791698, type: 2}
 --- !u!4 &1895130734
 Transform:
   m_ObjectHideFlags: 0

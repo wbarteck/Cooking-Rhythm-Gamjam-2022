@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cae41671527b454e94998b5702d8ac3, type: 3}
   m_Name: Pan Sizzle
   m_EditorClassIdentifier: 
-  cookingNote: {fileID: 8300000, guid: 38fff1fee4328d6458fdd1357ccee3cb, type: 3}
-  musicalNote: {fileID: 8300000, guid: 38fff1fee4328d6458fdd1357ccee3cb, type: 3}
+  cookingNote: {fileID: 8300000, guid: e057576f77022ea46afbb41a10d66a23, type: 3}
+  musicalNote: {fileID: 8300000, guid: e057576f77022ea46afbb41a10d66a23, type: 3}
   volume: 0.75
