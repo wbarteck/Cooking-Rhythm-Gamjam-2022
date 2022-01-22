@@ -702,14 +702,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Aaron - Design, Melody Development
+  m_text: 'Aaron - Melody Design, Game Design
 
     Brian - Code, UI
 
     Jacob -
-    Music, Melody, SFX
+    Title Screen Music, In Game Score, Sound Effects
 
-    Will - Code, UI, Tools
+    Will - Melody System, Tools
+    Code, 3D Modeling, Gameplay UI
 
 '
   m_isRightToLeft: 0
